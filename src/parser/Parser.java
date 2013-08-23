@@ -21,7 +21,10 @@ public class Parser {
 			
 			for(Element table:links)
 			{
-				System.out.println(table);
+				if(table.attr("class").equals("css-sched-times"))
+				{
+					System.out.print(table.text() + "\n");
+				}
 			}
 		}
 		catch(IOException e)
